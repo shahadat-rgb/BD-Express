@@ -1,0 +1,9 @@
+.banner{
+        background-image:linear-gradient(rgba(29, 28, 27, 0.39),rgba(36, 34, 29, 0.527)), url(../../photo/shooping3.jpg);
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position:center;
+        padding: 150px;
+        margin-bottom: 50px;
+    
+}
