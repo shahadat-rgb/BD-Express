@@ -3,12 +3,13 @@ import { useState } from 'react';
 import { fakeData } from '../FakeData/FakeData';
 import ProductCart from '../ProductCart/ProductCart';
 
-const Product = () => {
-    const [product,setProduct] = useState(fakeData)
+const Product = () => { 
+    const [product] = useState(fakeData)
+   
     return (
         <div id="card-header">
              {
-                 product.map(pd=> <ProductCart product={pd} key={pd.id}></ProductCart>)
+                 product.map(pd=> <ProductCart  product={pd} key={pd.id}></ProductCart>)
              }
         </div>
     );

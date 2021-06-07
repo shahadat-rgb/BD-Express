@@ -15,12 +15,13 @@
 .card{
    border: none;
 }
-.addToCart{
+.detailsBtn{
     width: 100%;
     background-color: orange;
     padding: 8px;
     border: none;
     color: white;
+    cursor: pointer;
 }
 .hot{
     position: absolute;

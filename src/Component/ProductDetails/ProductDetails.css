@@ -1,0 +1,30 @@
+.addToCart{
+    width: 45%;
+    background-color: orange;
+    padding: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.ProductQuantity {
+    padding: 5px 0px;
+    border: 1px  solid #d0c0c0;
+    border-radius: 20px;
+}
+
+.ProductQuantity button {
+    padding: 0px 15px;
+    border: none;
+    background: transparent;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.ProductQuantity button:focus{
+    outline: none;
+}
+/* .ProductPrice h4 {
+    font-size: 28px;
+    margin-right: 25px;
+} */

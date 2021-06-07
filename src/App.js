@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css'
 import Footer from './Component/Footer/Footer';
 import Navbar from './Component/Navbar/Navbar';
@@ -8,18 +8,25 @@ import {
   Route,
 } from "react-router-dom";
 import Home from './Component/Home/Home';
-import Cart from './Component/Cart/Cart';
 import NotFound from './Component/NotFound/NotFound';
+import ProductDetails from './Component/ProductDetails/ProductDetails';
+import Review from './Component/Review/Review';
+
 function App() {
+  const [cart,setCart]= useState([])
   return (
    <Router>
-      <Navbar></Navbar>
+      <Navbar cart={cart}></Navbar>
      <Switch>
        <Route exact path ='/'>
           <Home></Home>
        </Route>
-       <Route path='/cart'>
-          <Cart></Cart>
+
+       <Route path='/review'>
+         <Review cart={cart} setCart={setCart}></Review>
+        </Route>
+       <Route path='/productDetails/:productId'>
+           <ProductDetails ></ProductDetails>
        </Route>
        <Route path='*'>
           <NotFound></NotFound>
@@ -30,4 +37,10 @@ function App() {
   );
 }
 
-export default App;
+export default App;                    
+
+
+
+
+
+                                  

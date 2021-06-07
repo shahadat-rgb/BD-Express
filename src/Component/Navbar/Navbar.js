@@ -1,8 +1,8 @@
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
 import { Link } from 'react-router-dom';
-const Navbar = () => {
+const Navbar = (props) => {
+  const {cart}= props
     const count={
         color:"white",
         width:"50px",
@@ -14,6 +14,7 @@ const Navbar = () => {
         fontSize:'23px',
         paddingTop:"6px"
     }
+
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -26,10 +27,10 @@ const Navbar = () => {
     </button>
     <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
       <div className="navbar-nav">
-        <Link to='/cart'>
+        <Link to='/review'>
         <h3 className="nav-link text-dark" ><FontAwesomeIcon icon={faShoppingCart}/></h3> 
         </Link>
-        <div style={count}>0</div>
+        <div style={count}>{cart.length}</div>
       </div>
     </div>
   </div>
