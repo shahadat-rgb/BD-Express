@@ -3,11 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { addToDatabaseCart } from '../../utilities/databaseManager';
-// import { addToDatabaseCart, getDatabaseCart } from '../../utilities/databaseManager';
 import { fakeData } from '../FakeData/FakeData';
 import './ProductDetails.css'
 const ProductDetails = () => {
-    // const {setCartAmount} = props;
     const {productId} = useParams();
     const [products,setProducts] =useState({});
     const {img,name,price} = products
@@ -39,7 +37,7 @@ const ProductDetails = () => {
                   <button onClick={()=>handleCart(products)} className="addToCart"><FontAwesomeIcon icon={faShoppingCart} /> <span>Add To Cart</span></button>
                 </div>
                 <div className="col-md-7">
-                    <img style={{width:"100%"}}  src={img} alt="" />
+                    <img style={{width:"100%",padding:"20px"}}  src={img} alt="" />
                 </div>
             </div>
         </div>

@@ -1,27 +1,38 @@
-import React from 'react';
-
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './ReviewItem.css'
 const ReviewItem = (props) => {
-    const {img,name,price,quantity,id}  = props.product
+    const {img,name,price,id,quantity,status}  = props.product;
     const removeCart = props.removeCart
-    const borderStyle={
-        borderBottom:"1px solid gray",
-        borderRight:"1px solid gray",
-    }
+ 
     return (
-        <div className='container'>
-           <div style={borderStyle} className="row align-items-center">
-               <div className="col-md-5">
-                  <img style={{width:"100%",padding:"10px"}} src={img} alt="" />
+                <div className='container'>
+           <div className="row align-items-center">
+               <div className="col-md-3">
+                  <img style={{width:"100%",padding:"10px",borderRadius:"50"}} src={img} alt="" />
                </div>
-               <div className="col-md-7 text-center">
-                  <h1 className='mb-3'>{name}</h1>
-                   <p>Quantity : {quantity}</p>
-                   <h5>${price}</h5>
-                   <button onClick={()=>removeCart(id)} className="mb-4 mt-2 addToCart">Remove</button>
+               <div className="col-md-2 text-center">
+                  <p className='mb-3'>{name}</p>
+               </div>
+               <div className="col-md-2 text-center">
+                 <p>{status==="hot" ? <div className="hot1"> hot </div> : ''}
+               {status==="new" ? <div className="new1"> new </div> : ''}</p>
+               </div>
+               <div className="col-md-2 text-center">
+                 <p>&#36; <span id="price">{price}</span></p>
+               </div>
+    
+               <div className="col-md-1 text-center">
+                   <p>{quantity}</p>
+               </div>
+               <div className="col-md-2 text-center">
+               <button onClick={()=>removeCart(id)} className="mb-4 mt-3 addToCart"><FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon></button>
                </div>
            </div>
         </div>
+
     );
 };
 
 export default ReviewItem;
+

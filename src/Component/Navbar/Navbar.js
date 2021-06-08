@@ -28,7 +28,7 @@ const Navbar = (props) => {
     <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
       <div className="navbar-nav">
         <Link to='/review'>
-        <h3 className="nav-link text-dark" ><FontAwesomeIcon icon={faShoppingCart}/></h3> 
+        <h4 className="nav-link text-dark" ><FontAwesomeIcon icon={faShoppingCart}/>Order Item</h4> 
         </Link>
         <div style={count}>{cart.length}</div>
       </div>

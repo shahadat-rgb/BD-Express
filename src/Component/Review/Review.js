@@ -1,6 +1,7 @@
 import React, { useEffect} from 'react';
 import { getDatabaseCart, removeFromDatabaseCart } from '../../utilities/databaseManager';
 import { fakeData } from '../FakeData/FakeData';
+import PriceSection from '../PriceSection/PriceSection';
 import ReviewItem from '../ReviewItem/ReviewItem';
 
 const Review = (props) => {
@@ -23,15 +24,15 @@ const Review = (props) => {
         
     },[]) 
     return (
-        <div>
+        <div className='container'>
              <div className="row">
-               <div className="col-md-8">
+               <div className="col-md-9">
                {
                 cart.map(pd=> <ReviewItem removeCart={removeCart} product={pd} key={pd.id}></ReviewItem>)
             }
                </div>
-               <div className="col-md-4">
-                   <h3 className="text-center">Pyment history</h3>
+               <div className="col-md-3 mt-3">
+                   <PriceSection cart={cart}></PriceSection>
                </div>
              </div>
           </div>

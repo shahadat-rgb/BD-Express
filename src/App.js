@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { createContext, useState } from 'react';
 import './App.css'
 import Footer from './Component/Footer/Footer';
 import Navbar from './Component/Navbar/Navbar';
@@ -12,6 +12,7 @@ import NotFound from './Component/NotFound/NotFound';
 import ProductDetails from './Component/ProductDetails/ProductDetails';
 import Review from './Component/Review/Review';
 
+export const CartContext = createContext();
 function App() {
   const [cart,setCart]= useState([])
   return (
