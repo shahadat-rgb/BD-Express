@@ -26,9 +26,16 @@ const Navbar = (props) => {
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+    <div className="navbar-nav">
+        <Link to='/home' style={{textDecoration:"none",paddingRight:"15px",color:"black"}}>
+           <h4 className='nav-link'>Home</h4>
+        </Link>
+       
+      </div>
+
       <div className="navbar-nav">
-        <Link to='/review'>
-        <h4 className="nav-link text-dark" ><FontAwesomeIcon icon={faShoppingCart}/>Order Item</h4> 
+        <Link to='/review' style={{textDecoration:"none",color:"black"}}>
+        <h4 className="nav-link">Order Item  <FontAwesomeIcon icon={faShoppingCart}/></h4> 
         </Link>
         <div style={count}>{cart.length}</div>
       </div>

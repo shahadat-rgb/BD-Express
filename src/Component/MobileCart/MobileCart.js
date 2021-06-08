@@ -1,8 +1,8 @@
 import React from 'react';
-import {useHistory } from 'react-router-dom';
-import './ProductCart.css'
-const ProductCart = (props) => {
-    const {img,name,price,status,id} =props.product;
+import { useHistory } from 'react-router';
+
+const MobileCart = (props) => {
+    const {img,name,price,status,id} =props.mobile;
     const history = useHistory()
     const handleClick=()=>{
         history.push(`/productDetails/${id}`)
@@ -10,7 +10,7 @@ const ProductCart = (props) => {
    
     return (
         <div className='container mb-4'>
-            <div className="card pd-img ">
+            <div className="card pd-img">
                 <img onClick={handleClick} src={img} alt="" />
                 <div className="card-body text-center">
                   <h3>{name}</h3>
@@ -25,4 +25,4 @@ const ProductCart = (props) => {
     );
 };
 
-export default ProductCart;
+export default MobileCart;

@@ -4,50 +4,179 @@ export const fakeData =
   "img": "https://eastceylon.com/images/2021/05/31/perfume.jpg",
   "name": "Perfume",
   "price": 50.90,
-  "status": "hot"
+  "status": "hot",
+  "catagori" : "product",
 }, {
   "id": 2,
   "img": "https://eastceylon.com/images/2021/05/31/ring.jpg",
   "name": "Rings",
   "price": 107.92,
-  "status": "new"
+  "status": "new",
+  "catagori" : "product"
 }, {
   "id": 3,
   "img": "https://eastceylon.com/images/2021/05/31/shoes.jpg",
   "name": "Shoes",
   "price": 80.49,
-  "status": "hot"
+  "status": "hot",
+  "catagori" : "product",
 }, {
   "id": 4,
   "img": "https://eastceylon.com/images/2021/05/31/watch.jpg",
   "name": "Watch",
   "price": 40.90,
-  "status": "hot"
+  "status": "hot",
+  "catagori" : "product",
 },{
     "id": 5,
     "img": "https://eastceylon.com/images/2021/06/01/pexels-luis-quintero-1787236.jpg",
     "name": "Dslr",
     "price": 144.44,
-    "status": "new"
+    "status": "new",
+    "catagori" : "product",
   },  {
     "id": 6,
     "img": "https://eastceylon.com/images/2021/05/31/microphone.jpg",
     "name": "Blue Yetti",
     "price": 112.78,
-    "status": "new"
+    "status": "new",
+    "catagori" : "product",
   }, 
   {
     "id": 7,
     "img":"https://eastceylon.com/images/2021/06/01/pexels-splitshire-1591-1.jpg" ,
     "name": "Headphone",
     "price": 70.88,
-    "status": "hot"
+    "status": "hot",
+    "catagori" : "product",
   }, {
     "id": 8,
     "img": "https://eastceylon.com/images/2021/06/01/pexels-essow-1042143.jpg",
     "name": "Iphone",
     "price": 304.04,
-    "status": "new"
-  }]
+    "status": "new",
+    "catagori" : "product",
+  },
+
+  {
+    "id": 9,
+    "img": "https://eastceylon.com/images/2021/06/08/acer.jpg",
+    "name": "Acer",
+    "price": 502.30,
+    "status": "hot",
+    "catagori" : "laptop",
+  }, {
+    "id":10 ,
+    "img": "https://eastceylon.com/images/2021/06/08/images-2.jpg",
+    "name": "Doel-Laptop",
+    "price": 607.92,
+    "status": "new",
+    "catagori" : "laptop",
+  }, {
+    "id":11 ,
+    "img": "https://eastceylon.com/images/2021/06/08/Macbook.jpg",
+    "name": "Mackbook",
+    "price": 900.49,
+    "status": "hot",
+    "catagori" : "laptop",
+  }, {
+    "id": 12,
+    "img": "https://eastceylon.com/images/2021/06/08/Dell.jpg",
+    "name": "Dell",
+    "price": 767.90,
+    "status": "hot",
+    "catagori" : "laptop",
+  },{
+      "id":13 ,
+      "img": "https://eastceylon.com/images/2021/06/08/lenevo.jpg",
+      "name": "Lenovo",
+      "price": 644.44,
+      "status": "new",
+      "catagori" : "laptop",
+    },  {
+      "id":14 ,
+      "img": "https://eastceylon.com/images/2021/06/08/hp.jpg",
+      "name": "Hp",
+      "price": 812.78,
+      "status": "new",
+      "catagori" : "laptop",
+    }, 
+    {
+      "id":15 ,
+      "img":"https://eastceylon.com/images/2021/06/08/Asus.jpg" ,
+      "name": "Asus",
+      "price": 760.88,
+      "status": "hot",
+      "catagori" : "laptop",
+    }, {
+      "id":16 ,
+      "img": "https://eastceylon.com/images/2021/06/08/Lemote.jpg",
+      "name": "Lemote",
+      "price": 480.04,
+      "status": "new",
+      "catagori" : "laptop",
+    },
+
+    {
+      "id":17,
+      "img": "https://eastceylon.com/images/2021/06/08/iPhone-SE-2.jpg",
+      "name": "Ipnone-SE2",
+      "price": 502.30,
+      "status": "hot",
+      "catagori" : "mobile",
+    }, {
+      "id":18 ,
+      "img": "https://eastceylon.com/images/2021/06/08/Apple-iPhone-11-1-500x500.jpg",
+      "name": "Ipone-11",
+      "price": 415.92,
+      "status": "new",
+      "catagori" : "mobile",
+    }, {
+      "id":19,
+      "img": "https://eastceylon.com/images/2021/06/08/nokia_3_4-front_back-Fjord.png",
+      "name": "Nokia",
+      "price": 305.49,
+      "status": "hot",
+  "catagori" : "mobile",
+    }, {
+      "id": 20,
+      "img": "https://eastceylon.com/images/2021/06/08/sumsung21.jpg",
+      "name": "Sumsung S21",
+      "price": 367.90,
+      "status": "hot",
+  "catagori" : "mobile",
+    },{
+        "id":21 ,
+        "img": "https://eastceylon.com/images/2021/06/08/lenevof30c7b866ffcaf0d.jpg",
+        "name": "Lenevo",
+        "price": 244.44,
+        "status": "new",
+    "catagori" : "mobile",
+      },  {
+        "id":22,
+        "img": "https://eastceylon.com/images/2021/06/08/huawei-p20-lite-3.jpg",
+        "name": "Huawei p20",
+        "price": 492.78,
+        "status": "new",
+        "catagori" : "mobile",
+      }, 
+      {
+        "id":23 ,
+        "img":"https://eastceylon.com/images/2021/06/08/vivo.jpg" ,
+        "name": "Vivo",
+        "price": 560.88,
+        "status": "hot",
+         "catagori" : "mobile",
+      }, {
+        "id":24 ,
+        "img": "https://eastceylon.com/images/2021/06/08/swami.png",
+        "name": "Swami",
+        "price": 480.04,
+        "status": "new",
+       "catagori" : "mobile",
+      },
+  
+
+]
 
   

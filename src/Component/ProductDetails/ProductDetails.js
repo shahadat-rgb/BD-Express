@@ -30,14 +30,14 @@ const ProductDetails = () => {
     return (
          <div className="container">
             <div className="row align-items-center mb-4">
-                <div className="col-md-5">
-                  <h1>{name}</h1>
+                <div className="col-md-7">
+                <img style={{width:"100%",padding:"20px"}}  src={img} alt="" />
+                </div>
+                <div className="col-md-5 text-center pd-img">
+                   <h1>{name}</h1>
                    <p className='text-justify' >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, aspernatur asperiores odit eligendi explicabo aliquid? Vitae, repellat animi quisquam cupiditate dolorem nisi fugiat maxime vel temporibus eaque mollitia, nesciunt ipsam.</p>
                   <h4 className='text-secondary text-white'>${price}</h4>
-                  <button onClick={()=>handleCart(products)} className="addToCart"><FontAwesomeIcon icon={faShoppingCart} /> <span>Add To Cart</span></button>
-                </div>
-                <div className="col-md-7">
-                    <img style={{width:"100%",padding:"20px"}}  src={img} alt="" />
+                  <button onClick={()=>handleCart(products)} className="addToCart w-100"><FontAwesomeIcon icon={faShoppingCart} /> <span>Add To Cart</span></button>
                 </div>
             </div>
         </div>

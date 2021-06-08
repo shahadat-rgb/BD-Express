@@ -23,6 +23,10 @@ function App() {
           <Home></Home>
        </Route>
 
+       <Route path ='/home'>
+          <Home></Home>
+       </Route>
+
        <Route path='/review'>
          <Review cart={cart} setCart={setCart}></Review>
         </Route>

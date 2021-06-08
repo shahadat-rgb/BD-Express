@@ -37,3 +37,21 @@
     padding:10px 20px 10px 20px;
     background-color:rgb(76, 218, 20);
 }
+.pd-img img{
+  width: 100%;
+  height: 200px;
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+
+.pd-img img:hover {
+  transform: scale(1.1);
+}
+
+.pd-img button{
+  transition: all 0.5s linear;
+}
+.pd-img button:hover{
+  transform: scale(1.1);
+  background-color: hotpink;
+}

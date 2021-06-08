@@ -8,12 +8,16 @@
     outline: none;
 }
 .hot1{
+    width: 50px;
     color: white;
-    padding:10px 20px 10px 20px;
+    padding:8px 10px 8px 10px;
     background-color: orangered;
+    margin:0 auto;
 }
 .new1{
+    width: 50px;
     color: white;
     padding:8px 10px 8px 10px;
     background-color:rgb(76, 218, 20);
+    margin:0 auto;
 }
