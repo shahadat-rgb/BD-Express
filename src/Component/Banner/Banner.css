@@ -1,9 +1,9 @@
 .banner{
-        background-image:linear-gradient(rgba(29, 28, 27, 0.39),rgba(36, 34, 29, 0.527)), url(../../photo/shooping3.jpg);
+        background-image:linear-gradient(rgba(29, 28, 27, 0.39),rgba(36, 34, 29, 0.527)), url(../../photo/shoppingman.jpg);
         background-repeat: no-repeat;
         background-size:cover;
         background-position:center;
-        height:320px;
-        padding-top:80px;
+        height:450px;
+        padding-top:130px;
         margin-bottom: 50px;
 }

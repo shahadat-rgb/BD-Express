@@ -11,6 +11,7 @@ import Home from './Component/Home/Home';
 import NotFound from './Component/NotFound/NotFound';
 import ProductDetails from './Component/ProductDetails/ProductDetails';
 import Review from './Component/Review/Review';
+import Checkout from './Component/Checkout/Checkout';
 
 export const CartContext = createContext();
 function App() {
@@ -30,9 +31,15 @@ function App() {
        <Route path='/review'>
          <Review cart={cart} setCart={setCart}></Review>
         </Route>
+
        <Route path='/productDetails/:productId'>
            <ProductDetails ></ProductDetails>
        </Route>
+
+       <Route path='/checkout'>
+                   <Checkout></Checkout>
+       </Route>
+
        <Route path='*'>
           <NotFound></NotFound>
        </Route>

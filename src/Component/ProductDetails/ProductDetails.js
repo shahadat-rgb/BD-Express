@@ -2,6 +2,7 @@ import {  faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import { addToDatabaseCart } from '../../utilities/databaseManager';
 import { fakeData } from '../FakeData/FakeData';
 import './ProductDetails.css'
@@ -37,7 +38,7 @@ const ProductDetails = () => {
                    <h1>{name}</h1>
                    <p className='text-justify' >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, aspernatur asperiores odit eligendi explicabo aliquid? Vitae, repellat animi quisquam cupiditate dolorem nisi fugiat maxime vel temporibus eaque mollitia, nesciunt ipsam.</p>
                   <h4 className='text-secondary text-white'>${price}</h4>
-                  <button onClick={()=>handleCart(products)} className="addToCart w-100"><FontAwesomeIcon icon={faShoppingCart} /> <span>Add To Cart</span></button>
+                  <Link to='/home'><button className='addToCart'>Back To Home</button></Link> <button onClick={()=>handleCart(products)} className="addToCart"><FontAwesomeIcon icon={faShoppingCart} /> <span>Add To Cart</span></button>
                 </div>
             </div>
         </div>

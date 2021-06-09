@@ -57,6 +57,7 @@ const Product = () => {
    <>
        
        <div className="ml-3 mt-5 mb-5 text-center">
+          <h1 style={{color:"#1f2235",textAlign:"center",marginTop:"20px",marginBottom:"30px"}}> <span className='text-warning'>Our</span> Product</h1>
              <button className='btn btn-outline-success' onClick={handleProduct}><b>Other</b></button> <button className='btn btn-outline-primary'  onClick={handleLaptop}><b>Laptop</b></button>   <button className='btn btn-outline-danger'  onClick={handleMobile}><b>Mobile</b></button> 
          </div>
     

@@ -1,5 +1,5 @@
 import React from 'react';
-import {useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import './ProductCart.css'
 const ProductCart = (props) => {
     const {img,name,price,status,id} =props.product;
@@ -16,7 +16,7 @@ const ProductCart = (props) => {
                   <h3>{name}</h3>
                   <h6 className="text-secondary">${price}</h6>
                  </div>
-                   <button className="detailsBtn" onClick={handleClick} >More Details </button>
+                 <button className="detailsBtn" onClick={handleClick} >More Details </button>
             
                {status==="hot" ? <div className="hot"> hot </div> : ''}
                {status==="new" ? <div className="new"> new </div> : ''}

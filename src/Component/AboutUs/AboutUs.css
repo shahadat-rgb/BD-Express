@@ -1,0 +1,14 @@
+.cardItem{
+    box-shadow: 1px 2px 30px rgba(206, 198, 198, 0.527);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.cardItem img:hover {
+    transform: scale(1.2);
+  }
+  
+  .cardItem img{
+    transition: all 0.5s linear;
+  }

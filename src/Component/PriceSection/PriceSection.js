@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const PriceSection = (props) => {
     const cart = props.cart
@@ -15,7 +16,7 @@ const PriceSection = (props) => {
                           <p><b>Product Quantity : <strong className='float-right'> {quantity}</strong> </b></p>
 
                           <p><b>Total Price : <strong className='float-right'>{(totalPrice).toFixed(2)}</strong> </b></p>
-                          <button className='btn btn-white w-100'>Checkout</button>
+                           <Link to='/checkout' style={{textDecoration:"none",color:"black"}}>  <button className='btn btn-white w-100'>Checkout</button></Link>
                       </div>
                   </div>
         </div>

@@ -1,0 +1,16 @@
+.customerItem{
+    box-shadow: 1px 2px 30px rgba(206, 198, 198, 0.596);
+    transition: all 0.5s linear;
+    /* padding-top: 20px; */
+    margin-bottom: 30px;
+}
+
+.customerItem:hover{
+    transform: scale(1.2);
+  }
+.customerItem img{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+  
