@@ -1,6 +1,8 @@
 .delivary{
     transition: all 0.5s linear;
     cursor: pointer;
+    margin-bottom: 15px;
+    text-align: center;
 }
 .delivary:hover{
     transform: scale(1.1);
