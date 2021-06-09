@@ -105,7 +105,7 @@ const CustomerReview = () => {
               <div className="d-flex align-items-center bg-danger text-white p-2">
                 <img className="mx-3" src={customer6} alt="" />
                 <div>
-                  <h6 className=""><b>Monalisa Begum </b></h6>
+                  <h6 className=""><b>Monalisa Begume </b></h6>
                   <p className="m-0">28-5-2021</p>
                 </div>
               </div>
@@ -139,7 +139,7 @@ const CustomerReview = () => {
               <div className="d-flex align-items-center bg-danger text-white p-2">
                 <img className="mx-3" src={customer8} alt="" />
                 <div>
-                  <h6 className=""><b>henry gai</b></h6>
+                  <h6 className=""><b>jhnana geli</b></h6>
                   <p className="m-0">18-4-2021</p>
                 </div>
               </div>
