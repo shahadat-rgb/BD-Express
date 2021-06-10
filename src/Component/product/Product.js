@@ -26,7 +26,7 @@ const Product = () => {
     },[])
 
     const handleProduct = () => {
-        const  productItem = fakeData.filter(currentProduct=> currentProduct.catagori === "product");
+        const  productItem = product.filter(currentProduct=> currentProduct.catagori === "product");
          setManiProduct(productItem)
     
         setShowLaptop(false);
@@ -35,7 +35,7 @@ const Product = () => {
       }
      
     const handleLaptop = () => {
-        const  laptop = fakeData.filter(currentLaptop => currentLaptop.catagori === "laptop");
+        const  laptop = product.filter(currentLaptop => currentLaptop.catagori === "laptop");
         setLaptop(laptop)
     
         setShowLaptop(true);
@@ -44,21 +44,26 @@ const Product = () => {
       }
 
       const handleMobile = () => {
-        const mobile= fakeData.filter(currentMobile =>  currentMobile.catagori === "mobile");
+        const mobile= product.filter(currentMobile =>  currentMobile.catagori === "mobile");
         setMobile(mobile)
 
         setShowLaptop(false);
         setManiShowProduct(false);
         setShowMobile(true);
       }
-   
-   
+
+      const inputBox ={
+        margin:"0 auto",
+        border:"2px solid gray",
+      }
+   const [searchItem,setSearchItem] = useState("")
     return (
    <>
        
        <div className="ml-3 mt-5 mb-5 text-center">
-          <h1 style={{color:"#1f2235",textAlign:"center",marginTop:"20px",marginBottom:"30px"}}> <span className='text-warning'>Our</span> Product</h1>
              <button className='btn btn-outline-success' onClick={handleProduct}><b>Other</b></button> <button className='btn btn-outline-primary'  onClick={handleLaptop}><b>Laptop</b></button>   <button className='btn btn-outline-danger'  onClick={handleMobile}><b>Mobile</b></button> 
+           <br />  
+           <input type="search" onChange={(event)=>{setSearchItem(event.target.value)}} className='mt-3 w-75 p-2 input-box form-control' style={inputBox} placeholder="search your product name" name="" id="" />
          </div>
     
              {
@@ -66,23 +71,55 @@ const Product = () => {
                 <div id="card-header">
                  {
                    mainShowProduct &&
-                   mainProduct.map(pd=> <ProductCart  product={pd} key={pd.id}></ProductCart>)
+                   mainProduct.filter((val) =>
+                      {
+                            if (searchItem ==='') {
+                                   return val;
+                            }else if(val.name.toLowerCase().includes(searchItem.toLowerCase())){
+                                   return val;
+                            }
+                            
+                            
+                      }
+                   ).map(pd=> <ProductCart  product={pd} key={pd.id}></ProductCart>)
                  } 
                   </div>
-                 : <img src={reload} alt="" />
+                 : <   img src={reload} alt="" />
                 
                }
-               <div id="card-header">
-               {
-                     showLaptop &&
-                    laptop.map(lpt => <LaptopCart laptop={lpt} key={lpt.id}></LaptopCart>)
-               }
-               </div>
+               
+      
+                 <div id="card-header">
+                 {
+                       showLaptop &&
+                      laptop.filter((val) =>
+                       {
+                            if (searchItem ==='') {
+                                   return val;
+                            }else if(val.name.toLowerCase().includes(searchItem.toLowerCase())){
+                                   return val;
+                            }
+                        
+                            
+                      }
+                   ).map(lpt => <LaptopCart laptop={lpt} key={lpt.id}></LaptopCart>)
+                 }
+                 </div>
+               
                
                <div id="card-header">
                {    
                      showMobile &&
-                     mobile.map(mb=> <MobileCart mobile={mb} key={mb.id}></MobileCart>)
+                     mobile.filter((val) =>
+                     {
+                           if (searchItem ==='') {
+                                  return val;
+                           }else if(val.name.toLowerCase().includes(searchItem.toLowerCase())){
+                                  return val;
+                           }
+                           
+                     }
+                  ).map(mb=> <MobileCart mobile={mb} key={mb.id}></MobileCart>)
                }
                </div>
         

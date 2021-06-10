@@ -9,7 +9,7 @@ const Delivary = () => {
     return (
         <div className='container'>
             <h1 className='text-center' style={{marginTop:"50px",marginBottom:"50px"}}>Our <span className='text-warning'>Delivary</span>Man</h1>
-            <div className="row mb-5 align-items-center text-center">
+            <div className="row mb-5">
                 <div className="col-md-4 delivary">
                      <img style={{height:"300px"}} src={delivary1} alt="" />
                      <h3 className='text-warning'>DM. Najmul haq</h3>

@@ -1,9 +1,13 @@
 .banner{
-        background-image:linear-gradient(rgba(29, 28, 27, 0.39),rgba(36, 34, 29, 0.527)), url(../../photo/shoppingman.jpg);
+        background-image: url(../../photo/orange.jpg);
         background-repeat: no-repeat;
         background-size:cover;
         background-position:center;
         height:450px;
         padding-top:130px;
         margin-bottom: 50px;
+
+}
+.online{
+        color:rgb(8, 31, 61);
 }

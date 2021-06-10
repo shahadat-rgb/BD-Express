@@ -3,9 +3,9 @@ import './Banner.css'
 const Banner = () => {
     return (
       <div className="banner">
-            <div className='container text-white text-center'>
-              <h1 className="text-warning">BD Express </h1>
-              <h4>Enjoy Online Shooping with BD Express</h4>
+            <div className='text-white text-center'>
+            <h1 >Online Shooping</h1>
+            <h4 className="online">Enjoy Online Shooping with BD Express</h4>
         </div>
       </div>
     );

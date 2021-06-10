@@ -120,7 +120,7 @@ export const fakeData =
     {
       "id":17,
       "img": "https://eastceylon.com/images/2021/06/08/iPhone-SE-2.jpg",
-      "name": "Ipnone-SE2",
+      "name": "Ipone-SE2",
       "price": 502.30,
       "status": "hot",
       "catagori" : "mobile",
