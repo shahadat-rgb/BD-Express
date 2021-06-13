@@ -1,16 +1,18 @@
-import React, { useEffect} from 'react';
+import React, { useContext, useEffect} from 'react';
+import { CartContext } from '../../App';
 import { getDatabaseCart, removeFromDatabaseCart } from '../../utilities/databaseManager';
 import { fakeData } from '../FakeData/FakeData';
 import PriceSection from '../PriceSection/PriceSection';
 import ReviewItem from '../ReviewItem/ReviewItem';
 
-const Review = (props) => {
-    const {cart,setCart} = props;
+const Review = (props) => {    
+  const {cartCount,setCartCount}= props;
+
     const removeCart = (productKey)=>{
         const confermRemoveItem = window.confirm('Do you want to delete this order?')
         if (confermRemoveItem) {
-            const newCart = cart.filter(pd=> pd.id !== parseInt(productKey))
-            setCart(newCart)
+            const newCart = cartCount.filter(pd=> pd.id !== parseInt(productKey))
+            setCartCount(newCart)
             removeFromDatabaseCart(productKey)
         }
        
@@ -24,21 +26,21 @@ const Review = (props) => {
             product.quantity= saveCard[id];
             return product;  
         })
-        setCart(cartProduct)
+        setCartCount(cartProduct)
         
     },[]) 
     return (
         <div className='container'>
            {
-               cart.length >0 ?
+               cartCount.length >0 ?
                <div className="row">
                <div className="col-md-9">
                {
-                cart.map(pd=> <ReviewItem removeCart={removeCart} product={pd} key={pd.id}></ReviewItem>)
+                cartCount.map(pd=> <ReviewItem removeCart={removeCart} product={pd} key={pd.id}></ReviewItem>)
             }
                </div>
                <div className="col-md-3 mt-3 mb-3">
-                   <PriceSection cart={cart}></PriceSection>
+                   <PriceSection cart={cartCount}></PriceSection>
                </div>
              </div>
              :

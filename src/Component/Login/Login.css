@@ -1,0 +1,23 @@
+.form_style{
+    box-shadow: 1px 2px  8px rgba(185, 180, 180, 0.87);
+    padding: 30px;
+   
+}
+.inputbox{
+    padding: 10px;
+    background-color:rgba(179, 176, 176, 0.233);
+    border:none;
+    outline: none;
+    border-radius: 10px;
+}
+::-webkit-input-placeholder{
+    color: gray;
+    font-size: 18px;
+}
+.login{
+    border-radius: 10px;
+    padding: 10px;
+    background-color: orange;
+    font-size: 18px;
+    color: white;
+}

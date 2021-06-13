@@ -12,13 +12,17 @@ import NotFound from './Component/NotFound/NotFound';
 import ProductDetails from './Component/ProductDetails/ProductDetails';
 import Review from './Component/Review/Review';
 import Checkout from './Component/Checkout/Checkout';
-
-export const CartContext = createContext();
+import Login from './Component/Login/Login';
+import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
+// import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
+export const CartContext = createContext()
 function App() {
-  const [cart,setCart]= useState([])
+  const [cartCount,setCartCount]= useState([])
+  const [loggedInUser,setLoggedInUser] = useState({})
   return (
+    <CartContext.Provider value={[loggedInUser,setLoggedInUser]}>
    <Router>
-      <Navbar cart={cart}></Navbar>
+      <Navbar cartCount={cartCount}></Navbar>
      <Switch>
        <Route exact path ='/'>
           <Home></Home>
@@ -28,16 +32,22 @@ function App() {
           <Home></Home>
        </Route>
 
-       <Route path='/review'>
-         <Review cart={cart} setCart={setCart}></Review>
+       <Route path='/login'>
+             <Login></Login>
         </Route>
+
+       <PrivateRoute  path='/review'>
+           <Review cartCount={cartCount} setCartCount={setCartCount}></Review>
+       </PrivateRoute>
+
+      
 
        <Route path='/productDetails/:productId'>
            <ProductDetails ></ProductDetails>
        </Route>
 
        <Route path='/checkout'>
-                   <Checkout></Checkout>
+               <Checkout></Checkout>
        </Route>
 
        <Route path='*'>
@@ -46,6 +56,7 @@ function App() {
      </Switch>
      <Footer></Footer>
    </Router>
+</CartContext.Provider>
   );
 }
 

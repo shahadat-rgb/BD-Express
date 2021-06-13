@@ -1,8 +1,26 @@
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import { CartContext } from '../../App';
+import { handleSignOut } from '../Login/LoginManager';
 const Navbar = (props) => {
-  const {cart}= props
+  const {cartCount}=props
+  const [loggedInUser, setLoggedInUser] = useContext(CartContext);
+    let history = useHistory();
+
+  const handleLoggingButton = () => {
+    if (loggedInUser.name || loggedInUser.email) {
+        handleSignOut()
+      setLoggedInUser({});
+      history.push("/");
+    } else {
+      history.push("/login");
+    }
+  };
+
+
+
     const count={
         color:"white",
         width:"50px",
@@ -27,18 +45,28 @@ const Navbar = (props) => {
     </button>
     <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
     <div className="navbar-nav">
-        <Link to='/home' style={{textDecoration:"none",paddingRight:"15px",color:"black"}}>
+        <Link to='/home' style={{textDecoration:"none",paddingRight:"15px"}}>
            <h4 className='nav-link'>Home</h4>
         </Link>
        
       </div>
+      <div className="navbar-nav">
+             <h4 className='nav-link'>{loggedInUser.name}</h4>
+      </div>
 
       <div className="navbar-nav">
-        <Link to='/review' style={{textDecoration:"none",color:"black"}}>
-        <h4 className="nav-link">Order Item  <FontAwesomeIcon icon={faShoppingCart}/></h4> 
+        <Link to='/review' style={{textDecoration:"none"}}>
+        <h4 className="nav-link">Order Item  <FontAwesomeIcon icon={faShoppingCart}/><strong className="text-primary"><b>({cartCount.length})</b></strong></h4> 
         </Link>
-        <div style={count}>{cart.length}</div>
+        {/* <div style={count}>{cartCount.length}</div> */}
       </div>
+      <div className="navbar-nav pl-3">
+       <button onClick={handleLoggingButton} className="btn btn-dark">
+                    {loggedInUser.name || loggedInUser.email
+                      ? "Logout"
+                      : "Login"}
+                  </button>
+       </div>
     </div>
   </div>
 </nav>
