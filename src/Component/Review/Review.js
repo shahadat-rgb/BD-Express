@@ -7,9 +7,10 @@ import ReviewItem from '../ReviewItem/ReviewItem';
 
 const Review = (props) => {    
   const {cartCount,setCartCount}= props;
+  const [loggedInUser,setLoggedInUser] = useContext(CartContext)
 
     const removeCart = (productKey)=>{
-        const confermRemoveItem = window.confirm('Do you want to delete this order?')
+        const confermRemoveItem = window.confirm('Do you want to delete this product?')
         if (confermRemoveItem) {
             const newCart = cartCount.filter(pd=> pd.id !== parseInt(productKey))
             setCartCount(newCart)
@@ -31,6 +32,8 @@ const Review = (props) => {
     },[]) 
     return (
         <div className='container'>
+            <h3 className='text-center mb-3'>welcome back || <span className='text-warning'>{loggedInUser.username}</span></h3>
+
            {
                cartCount.length >0 ?
                <div className="row">

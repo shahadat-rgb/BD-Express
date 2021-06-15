@@ -12,8 +12,8 @@ const Navbar = (props) => {
   const handleLoggingButton = () => {
     if (loggedInUser.name || loggedInUser.email) {
         handleSignOut()
-      setLoggedInUser({});
-      history.push("/");
+        setLoggedInUser({});
+        history.push("/");
     } else {
       history.push("/login");
     }
@@ -50,9 +50,10 @@ const Navbar = (props) => {
         </Link>
        
       </div>
-      <div className="navbar-nav">
-             <h4 className='nav-link'>{loggedInUser.name}</h4>
-      </div>
+
+    <div className="navbar-nav">
+             <h4 className='nav-link'>{loggedInUser.username}</h4>
+    </div>
 
       <div className="navbar-nav">
         <Link to='/review' style={{textDecoration:"none"}}>
@@ -62,15 +63,15 @@ const Navbar = (props) => {
       </div>
       <div className="navbar-nav pl-3">
        <button onClick={handleLoggingButton} className="btn btn-dark">
-                    {loggedInUser.name || loggedInUser.email
+                    {loggedInUser.name|| loggedInUser.email
                       ? "Logout"
                       : "Login"}
                   </button>
+          </div>
        </div>
     </div>
-  </div>
-</nav>
-        </div>
+ </nav>
+</div>
     );
 };
 

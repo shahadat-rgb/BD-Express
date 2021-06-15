@@ -7,7 +7,7 @@ export const handleSignOut = () => {
       .then((res) => {
         const signedOutUser = {
           isSignedIn: false,
-          name: "",
+          username: "",
           email: "",
           photo: "",
           error: "",
