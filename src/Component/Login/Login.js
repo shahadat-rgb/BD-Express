@@ -148,7 +148,7 @@ if (!firebase.apps.length) {
   
 return (
             
-<div className='container '>
+<div className='container'>
    <div className="row align-items-center">
          <div className="col-md-5 form_style">
 
@@ -201,7 +201,7 @@ return (
           
             </FormGroup>
        </form> 
-                    <div className="text-center"> 
+                <div className="text-center"> 
                   
                        <button  onClick={handleGoogleSignIn} class="btn btn-danger  mr-2">
                                 <img style={{height:"40px" }} src={google} alt="" />

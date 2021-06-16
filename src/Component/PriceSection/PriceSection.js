@@ -33,14 +33,14 @@ const PriceSection = (props) => {
                           <p><b>Total Price : <strong className='float-right'>{(totalPrice).toFixed(2)}</strong> </b></p>
                         
                             <div className="stripe_section text-center">
-                                <StripeCheckout
+                                <StripeCheckout 
                                      stripeKey= "pk_test_51J2XWDKliSXJZLsmJUmAgKfDOY5JdEo8xDx28pdy5w2ZFqFnGq0KeVk3NQt83xt7WJU2cpuhdNh6tEipEfUUVxJI00MBZeSy9I"
                                      token = {handleToken}
                                      billingAddress
                                      shippingAddress
                                      amount={totalPrice * 100}
                                      name="All Products"
-
+                        
                                 >
                                     
                                 </StripeCheckout>
