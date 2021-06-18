@@ -18,6 +18,8 @@ const PriceSection = (props) => {
          const {status} =response.data;
          if (status === "success" ) {
              history.push("/checkout")
+         }else{
+             console.log("pyment not successfully added in stripe, please try again");
          }
     }
 
