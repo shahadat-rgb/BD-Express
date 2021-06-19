@@ -18,6 +18,7 @@ Then if the user is logged in, he will be able to see the product he has ordered
 * Node.js
 * Epxpress.js
 * JavaScript
+* Stripe
 * Bootstrap 4
 * css
 * htmml
