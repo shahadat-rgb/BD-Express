@@ -15,11 +15,13 @@ const PriceSection = (props) => {
                 product,
                 token
           });
-         const {status} =response.data;
-         if (status === "success" ) {
+         const {success} = response.data;
+         if (success === "success") {
              history.push("/checkout")
+
          }else{
-             console.log("pyment not successfully added in stripe, please try again");
+             alert("pyment not successfully added in stripe,because net connection error, please try again")
+             history.push("/")
          }
     }
 
