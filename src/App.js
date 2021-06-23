@@ -14,7 +14,7 @@ import Review from './Component/Review/Review';
 import Checkout from './Component/Checkout/Checkout';
 import Login from './Component/Login/Login';
 import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
-// import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
+
 export const CartContext = createContext()
 function App() {
   const [cartCount,setCartCount]= useState([])
@@ -39,8 +39,6 @@ function App() {
        <PrivateRoute  path='/review'>
            <Review cartCount={cartCount} setCartCount={setCartCount}></Review>
        </PrivateRoute>
-
-      
 
        <Route path='/productDetails/:productId'>
            <ProductDetails ></ProductDetails>

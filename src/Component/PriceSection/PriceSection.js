@@ -15,8 +15,9 @@ const PriceSection = (props) => {
                 product,
                 token
           });
-         const {success} = response.data;
-         if (success === "success") {
+          console.log(response);
+         const {status} = response.data;
+         if (status === "success") {
              history.push("/checkout")
 
          }else{

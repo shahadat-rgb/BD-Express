@@ -144,14 +144,14 @@ export const fakeData =
       "name": "Sumsung S21",
       "price": 360,
       "status": "hot",
-  "catagori" : "mobile",
+     "catagori" : "mobile",
     },{
         "id":21 ,
         "img": "https://eastceylon.com/images/2021/06/08/lenevof30c7b866ffcaf0d.jpg",
         "name": "Lenevo",
         "price": 244,
         "status": "new",
-    "catagori" : "mobile",
+        "catagori" : "mobile",
       },  {
         "id":22,
         "img": "https://eastceylon.com/images/2021/06/08/huawei-p20-lite-3.jpg",
