@@ -61,7 +61,7 @@ const Product = () => {
    <>
        
        <div className="ml-3 mt-5 mb-5 text-center">
-             <button className='btn btn-outline-success' onClick={handleProduct}><b>Other</b></button> <button className='btn btn-outline-primary'  onClick={handleLaptop}><b>Laptop</b></button>   <button className='btn btn-outline-danger'  onClick={handleMobile}><b>Mobile</b></button> 
+             <button className='btn btn-outline-success' onClick={handleProduct}><b>T-shirt</b></button> <button className='btn btn-outline-primary'  onClick={handleLaptop}><b>Laptop</b></button>   <button className='btn btn-outline-danger'  onClick={handleMobile}><b>Mobile</b></button> 
            <br />  
            <input type="search" onChange={(event)=>{setSearchItem(event.target.value)}} className='mt-3 w-75 p-2 input-box form-control' style={inputBox} placeholder="search your product name" name="" id="" />
          </div>

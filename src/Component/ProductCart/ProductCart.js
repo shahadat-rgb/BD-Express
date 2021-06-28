@@ -13,7 +13,7 @@ const ProductCart = (props) => {
             <div className="card pd-img ">
                 <img onClick={handleClick} src={img} alt="" />
                 <div className="card-body text-center">
-                  <h3>{name}</h3>
+                  <h5>{name}</h5>
                   <h6 className="text-secondary">${price}</h6>
                  </div>
                  <button className="detailsBtn" onClick={handleClick} >More Details </button>
