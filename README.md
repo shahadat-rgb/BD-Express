@@ -1,8 +1,8 @@
 ## BD-Express
 
-### Product Details:
+### Project Details:
 
-* this is a E=Commerce website of 4 page.
+* this is a E-Commerce website.
 * I have created three types of products here.First of all, I have created some different types of products.
   Then laptops and mobiles.
 * This web site has search box options. So that a user can search for the product of his choice in a very short time.
