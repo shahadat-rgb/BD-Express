@@ -28,7 +28,7 @@ Then if the user is logged in, he will be able to see the product he has ordered
 
 ### Home page :
 
-![2b2f44ebc62ab9b328edc851faf34c67](https://user-images.githubusercontent.com/67516342/122639612-a6ba1800-d0af-11eb-97a7-968be012da2a.jpeg)
+![image](https://user-images.githubusercontent.com/67516342/124718427-f293fc00-deba-11eb-818e-6e99c7b1e93a.png)
 
 ### Product Details:
 ![shooe](https://user-images.githubusercontent.com/67516342/122639660-e97bf000-d0af-11eb-9b61-fb15fe5921a3.png)
